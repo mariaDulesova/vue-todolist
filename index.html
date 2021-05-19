@@ -15,7 +15,8 @@
     <div id="root">
         <input type="text" 
         placeholder="Add something to do..."
-        v-model ="newToDo.activity">
+        v-model ="newToDo.activity"
+        @keydown.enter = "onKeyDown">
         <button @click="addToDo">Add</button>
         <ul v-if = "toDoList.length>0">
             <li v-for = "(toDo, index) in toDoList"> 

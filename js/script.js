@@ -49,6 +49,9 @@ var app = new Vue (
                     activity: "",
                     completed:false
                 };
+            },
+            onKeyDown: function(event){
+                this.addToDo(); 
             }
         }
     }
