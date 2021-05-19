@@ -36,7 +36,6 @@ var app = new Vue (
                 activity: "",
                 completed:false
             },
-            crossLine: ""
 
         },
         methods: {
@@ -55,12 +54,13 @@ var app = new Vue (
                 this.addToDo(); 
             },
             crossToDo: function(i){
-                if(i < this.toDoList.length){
-                    this.toDoList[i].completed = true;
-                } else {
-                    this.toDoList[i].completed = false;
-                }
-               
+                // if(i < this.toDoList.length){
+                //     this.toDoList[i].completed = true;
+                // } else {
+                //     this.toDoList[i].completed = false;
+                // }
+                this.toDoList[i].completed = true;
+                
  
             }
         }

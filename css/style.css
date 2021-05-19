@@ -3,12 +3,32 @@
     padding: 0;
     margin:0
 }
+.wrap {
+    width:70%;
+    margin: 0 auto;
+    
+}
+#root {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-top:50px;
+    padding:10px;
+    background-color: rgb(218, 252, 218);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
 
 li{
     font-size: 24px;
     line-height:30px;
     padding: 10px;
     cursor:pointer;
+    list-style:none;
 }
 .active {
     text-decoration: line-through;
@@ -17,7 +37,7 @@ li{
 .fa-window-close{
     cursor:pointer;
     color: red;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 p{
@@ -27,7 +47,7 @@ p{
 
 input {
     margin:10px;
-    width:500px;
+    width:400px;
     line-height:30px;
     border-color: lightgreen;
 }

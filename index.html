@@ -12,22 +12,31 @@
     <title>Vue To-Do List</title>
 </head>
 <body>
+    <div class="wrap">
     <div id="root">
-        <input type="text" 
-        placeholder="Add something to do..."
-        v-model ="newToDo.activity"
-        @keydown.enter = "onKeyDown">
-        <button @click="addToDo">Add</button>
+        <div>
+            <input type="text" 
+            placeholder="Add something to do..."
+            v-model ="newToDo.activity"
+            @keydown.enter = "onKeyDown">
+            <button @click="addToDo">Add</button>
+        </div>
+        
         <ul v-if = "toDoList.length>0">
             <li v-for = "(toDo, index) in toDoList"> 
-                <span @click = "crossToDo(index)"
-                :class="(toDoList[index].completed == true) ? 'active' : ''">{{ toDo.activity }}</span>
                 <i class="fas fa-window-close"
                 @click = "removeToDo(index)">
                 </i>
+                <span 
+                @click = "crossToDo(index)"
+                :class="(toDoList[index].completed == true) ? 'active' : ''">
+                {{ toDo.activity }}
+                </span>
+                
             </li>
         </ul>
         <p v-else>Congratulations! You have nothing to do!</p>
+    </div>
     </div>
     <script src="js/script.js"></script>
 </body>
