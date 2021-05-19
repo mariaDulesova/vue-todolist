@@ -31,12 +31,24 @@ var app = new Vue (
                     activity: "Go to the gym",
                     completed: false
                 }
-            ]
+            ],
+            newToDo: {
+                activity: "",
+                completed:false
+            }
 
         },
         methods: {
             removeToDo: function (i){
-                this.toDoList.splice(i,1)
+                this.toDoList.splice(i,1);
+            },
+            addToDo: function(){
+                if(this.newToDo.activity.trim().length>0)
+                this.toDoList.push(this.newToDo);
+                this.newToDo = {
+                    activity: "",
+                    completed:false
+                };
             }
         }
     }

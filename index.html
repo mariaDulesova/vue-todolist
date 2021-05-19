@@ -13,8 +13,10 @@
 </head>
 <body>
     <div id="root">
-        <input type="text" placeholder="Add something to do...">
-        <button>Add</button>
+        <input type="text" 
+        placeholder="Add something to do..."
+        v-model ="newToDo.activity">
+        <button @click="addToDo">Add</button>
         <ul v-if = "toDoList.length>0">
             <li v-for = "(toDo, index) in toDoList"> 
                 {{ toDo.activity }}
