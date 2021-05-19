@@ -35,7 +35,9 @@ var app = new Vue (
 
         },
         methods: {
-
+            removeToDo: function (i){
+                this.toDoList.splice(i,1)
+            }
         }
     }
 )

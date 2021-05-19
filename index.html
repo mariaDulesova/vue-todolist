@@ -13,12 +13,17 @@
 </head>
 <body>
     <div id="root">
-        <ul>
-            <li v-for = "(toDo) in toDoList"> 
+        <input type="text" placeholder="Add something to do...">
+        <button>Add</button>
+        <ul v-if = "toDoList.length>0">
+            <li v-for = "(toDo, index) in toDoList"> 
                 {{ toDo.activity }}
+                <i class="fas fa-window-close"
+                @click = "removeToDo(index)">
+                </i>
             </li>
         </ul>
-        <p>Congratulations! You have nothing to do!</p>
+        <p v-else>Congratulations! You have nothing to do!</p>
     </div>
     <script src="js/script.js"></script>
 </body>

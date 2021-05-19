@@ -1,0 +1,47 @@
+*{
+    box-sizing: borde-box;
+    padding: 0;
+    margin:0
+}
+
+li{
+    font-size: 24px;
+    line-height:30px;
+    padding: 10px;
+}
+
+.fa-window-close{
+    cursor:pointer;
+    color: red;
+}
+
+p{
+    font-size: 24px;
+    padding: 10px;
+}
+
+input {
+    margin:10px;
+    width:500px;
+    line-height:30px;
+    border-color: lightgreen;
+}
+
+button {
+    width: 100px;
+    padding:5px;
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+}
+button:hover {
+    background-color: rgb(95, 209, 95);
+    border-color: rgb(95, 209, 95);;
+    color: black;
+    cursor:pointer;
+}
