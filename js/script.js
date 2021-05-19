@@ -60,7 +60,7 @@ var app = new Vue (
                 } else {
                     this.toDoList[i].completed = false;
                 }
-               ;
+               
  
             }
         }

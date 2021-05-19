@@ -19,10 +19,9 @@
         @keydown.enter = "onKeyDown">
         <button @click="addToDo">Add</button>
         <ul v-if = "toDoList.length>0">
-            <li v-for = "(toDo, index) in toDoList"
-            @click = "crossToDo(index)"
-            :class="(toDoList[index].completed == true) ? 'active' : ''"> 
-                {{ toDo.activity }}
+            <li v-for = "(toDo, index) in toDoList"> 
+                <span @click = "crossToDo(index)"
+                :class="(toDoList[index].completed == true) ? 'active' : ''">{{ toDo.activity }}</span>
                 <i class="fas fa-window-close"
                 @click = "removeToDo(index)">
                 </i>

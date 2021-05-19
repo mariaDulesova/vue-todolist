@@ -17,6 +17,7 @@ li{
 .fa-window-close{
     cursor:pointer;
     color: red;
+    margin-left: 20px;
 }
 
 p{
