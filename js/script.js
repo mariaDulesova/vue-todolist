@@ -37,10 +37,13 @@ var app = new Vue (
                 completed:false
             },
 
+            changeIcon: false
+
         },
         methods: {
             removeToDo: function (i){
                 this.toDoList.splice(i,1);
+              
             },
             addToDo: function(){
                 if(this.newToDo.activity.trim().length>0)
@@ -54,12 +57,13 @@ var app = new Vue (
                 this.addToDo(); 
             },
             crossToDo: function(i){
-                // if(i < this.toDoList.length){
-                //     this.toDoList[i].completed = true;
-                // } else {
-                //     this.toDoList[i].completed = false;
-                // }
-                this.toDoList[i].completed = true;
+                
+                if (this.toDoList[i].completed == false) {
+                    this.toDoList[i].completed = true;
+                }else {
+                    this.toDoList[i].completed = false
+                }
+                
                 
  
             }

@@ -24,15 +24,15 @@
         
         <ul v-if = "toDoList.length>0">
             <li v-for = "(toDo, index) in toDoList"> 
+                <!-- <i class="fas fa-check-circle"></i> -->
                 <i class="fas fa-window-close"
-                @click = "removeToDo(index)">
-                </i>
+                @click = "removeToDo(index)"
+                ></i>
                 <span 
                 @click = "crossToDo(index)"
-                :class="(toDoList[index].completed == true) ? 'active' : ''">
+                :class="(toDo.completed == true) ? 'active' : ''">
                 {{ toDo.activity }}
                 </span>
-                
             </li>
         </ul>
         <p v-else>Congratulations! You have nothing to do!</p>
